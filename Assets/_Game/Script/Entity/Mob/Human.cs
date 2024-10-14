@@ -19,6 +19,9 @@ namespace InnoStudio
         [SerializeField] private List<Brick> holdBricks;
         public bool IsFullBrick => holdBricks.Count >= MAX_BRICK || current >= MAX_BRICK;
         private int current;
+
+        [SerializeField] protected Animator animator;
+
         public virtual void Init()
         {
             posHolds = new float[MAX_BRICK];
